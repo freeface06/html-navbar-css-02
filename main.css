@@ -1,0 +1,81 @@
+::-webkit-scrollbar {
+  width: 12px; /* 스크롤바의 너비(두께) */
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 6px; /* 움직이는 부분 끝 둥굴게 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: black; /* 스크롤바 뒷 배경 색상 */
+  border-radius: 6px; /* 배경부분 끝 둥굴게 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5); /* 움직이는 스크롤바에 마우스를 올렸을때의 배경색깔 */
+}
+
+body{
+  height: 1000vh;
+}
+
+.swiper {
+  height: 80vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 10;
+  width: 5rem;
+  height: 5rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: black;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.swiper-pagination{
+  --swiper-theme-color: black;
+  height: 0.7rem !important;
+  top: auto !important;
+  bottom: 0 !important;
+}
